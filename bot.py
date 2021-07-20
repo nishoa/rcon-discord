@@ -13,8 +13,12 @@ async def on_ready():
 
 @client.command()
 async def rcon(ctx, *, text):
-    rc(text)
-    await ctx.send(f'{text} выполнена')
+    try:
+        rc(text)
+        await ctx.send(f'{text} выполнена')
+    except:
+        await ctx.send(f'{text} возникла ошибка')
+
 
 token = os.environ.get('BOT_TOKEN')
 client.run(str(token))
