@@ -1,5 +1,6 @@
 from mctools import RCONClient
 from threading import Thread
+import os
 
 HOST = os.environ.get('SERVER-IP')
 PORT = os.environ.get('SERVER-PORT')
