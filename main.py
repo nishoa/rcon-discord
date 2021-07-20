@@ -1,13 +1,13 @@
 from mctools import RCONClient
 from threading import Thread
 
-HOST = '135.181.170.93'
-PORT = 25623
+HOST = 'SERVER-IP'
+PORT = SERVER-PORT
 
 rcon = RCONClient(HOST, port=PORT)
 
 
 def rc(send):
-    if rcon.login('Kpl9jdhJ'):
+    if rcon.login('SERVER-PASSWORD'):
             rcon.command(send)
 
