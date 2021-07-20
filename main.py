@@ -4,11 +4,12 @@ import os
 
 HOST = os.environ.get('SERVER-IP')
 PORT = os.environ.get('SERVER-PORT')
-print(PORT)
+PASSWORD = os.environ.get('SERVER-PASSWORD')
 rcon = RCONClient(HOST, port=int(PORT))
 
 
+
 def rc(send):
-    if rcon.login('SERVER-PASSWORD'):
+    if rcon.login(PASSWORD):
             rcon.command(send)
 
