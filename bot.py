@@ -1,6 +1,7 @@
 from main import rc
 import discord
 from discord.ext import commands
+import os
 
 client = discord.ext.commands.Bot(command_prefix="!")
 
@@ -16,7 +17,7 @@ async def rcon(ctx, *, text):
         await ctx.send(f'{text} выполнена')
     await ctx.send(f'{text} возникла ошибка')
 
-client.run('ODY2NzQxMTUxNzUzODMwNDMw.YPW9mQ.DutQ43FhvoN-PRJSq9ct88D0xG8')
+token = os.environ.get('BOT_TOKEN')
 
 # import discord
 # from threading import Thread
