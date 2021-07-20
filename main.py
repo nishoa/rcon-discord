@@ -11,5 +11,8 @@ rcon = RCONClient(HOST, port=int(PORT))
 
 def rc(send):
     if rcon.login(PASSWORD):
-            rcon.command(send)
+            global get
+            get = rcon.command(send, return_packet=True)
+            return get
+        
 
