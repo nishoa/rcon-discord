@@ -16,7 +16,7 @@ async def rcon(ctx, *, text):
         await ctx.send(f'{text} выполнена')
     await ctx.send(f'{text} возникла ошибка')
 
-client.run('ODY2NzQxMTUxNzUzODMwNDMw.YPW9mQ.c9656VfiAvaBWJvcMzytOq7gMZs')
+client.run('ODY2NzQxMTUxNzUzODMwNDMw.YPW9mQ.DutQ43FhvoN-PRJSq9ct88D0xG8')
 
 # import discord
 # from threading import Thread
