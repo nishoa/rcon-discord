@@ -15,7 +15,7 @@ def rc(send):
             global get
             get = rcon.command(send, return_packet=True)
             get = re.sub(r'\x1B\[(;?[0-9]{1,3})+[mGK]', '', str(get))
-            get = re.sub(r'^[R,\s]..[R,N].+\n', '', str(get))
+            get = re.sub(r'^[R,\s]..[R,N].+\n', '', get, 0, re.MULTILINE)
             return get
         
 
