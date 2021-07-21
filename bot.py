@@ -15,7 +15,6 @@ async def on_ready():
 async def rcon(ctx, *, text):
     try:
         response = rc(text)
-        print(response)
         await ctx.send(response)
         # await ctx.send(f'{text} выполнена')
     except:
