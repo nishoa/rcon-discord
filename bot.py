@@ -17,7 +17,8 @@ async def rcon(ctx, *, text):
         response = rc(text)
         if response == '':
             await ctx.send(f'{text} команда выполнена')
-        await ctx.send(response)
+        else:
+            await ctx.send(response)
     except:
         await ctx.send(f'{text} возникла ошибка')
 
