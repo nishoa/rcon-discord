@@ -14,7 +14,7 @@ def rc(send):
     if rcon.login(PASSWORD):
             global get
             get = rcon.command(send, return_packet=True)
-            get = re.sub(r'\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g', '', str(get))
+            get = re.sub(r'\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]', '', str(get))
             return get
         
 
