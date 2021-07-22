@@ -21,6 +21,7 @@ async def rcon(ctx, *, text):
             await ctx.send(response)
     except:
         await ctx.send(f'{text} возникла ошибка')
+        return rcon
 
 
 token = os.environ.get('BOT_TOKEN')
